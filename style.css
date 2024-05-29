@@ -1,0 +1,400 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(./img/wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    overflow:hidden; 
+}
+header{
+    border:none;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    border: none;
+}
+.nav .navmenu{
+    border: none;
+    list-style: none;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 9px;
+}
+.nav .navmenu li{
+    cursor: pointer;
+    color: #fff;
+}
+.nav .navmenu li:hover{
+    text-decoration: 4px underline orangered;
+}
+
+.sidebar{
+    border:none;
+    position: absolute;
+    height: 45vh;
+    left: -40%;
+    top: 0px;
+    width: 130px;
+    z-index: 99;
+    backdrop-filter: blur(45px);
+    padding: 5px;
+    transition: .6s ease-in-out;
+}
+.sidebar.active{
+    left:0%;
+    transition: .6s ease-in-out;
+}
+
+.sidebar .fmenu{
+    width: 100%;
+    height: 40px;
+    gap:5px;
+    border:none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    top: 60px;
+    margin-top: 8px;
+}
+.sidebar .fmenu:hover{
+    background: #fff;
+}
+.sidebar .fmenu div{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.main{
+    width: 100%;
+    height:calc(100vh - 15vh);
+    position: absolute;
+    top: 90px;
+}
+.main h2{
+    text-align: center;
+    width: 40%;
+    min-width:30%;
+    margin: 140px 29px ;
+    padding: 10px;
+    color: #ffe208;
+    font-size: 1.8rem;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.main p {
+    width: 30%;
+    color:#fff;
+    margin-left: 30px;
+    position: relative;
+    transform: translateY(-90px);
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.2rem;
+    padding: 7px;
+}
+.main span{
+    border: 2px solid #000;
+    display: inline-block;
+    padding: 9px;
+    text-align: center;
+    position: absolute;
+    transform: translate(30%,-80%);
+    z-index: 3;
+    color: #da9707;
+    background: #fff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.main span:hover{
+   background: #da9707;
+   color: #fff;
+}
+.main .cardWrapper{
+ width: 40%;
+ min-width: 10%;
+ height: 300px;
+ position: absolute;
+ z-index: 4;
+ right: 10px;
+ bottom: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px;
+ 
+}
+.main .cardWrapper::before{
+content: "Your Favourite Charecters";
+position: absolute;
+top: -30px;
+font-size: 1.2rem;
+font-weight:550;
+color: #ff9d00;
+text-align: center;
+}
+
+.main .cardWrapper .box{
+    position: relative;
+    width: 30%;
+    /* min-width: 20%; */
+    height: 280px;
+    border: 2px solid white;
+    overflow: hidden;
+    cursor: pointer;
+}
+.main .cardWrapper .box1{
+    background: url(./img/goku1.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box1::after{
+    content: "GoKu";
+    font-weight: bold;
+    text-align: center;
+    color:orange;
+    width: 100%;
+    height: 80px;
+    max-height: 0px;
+    position: absolute;
+    z-index: 1;
+    background: #000;
+    opacity:.7;
+    bottom: -40px;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box1:hover{
+    background: url(./img/goku2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box1:active{
+   transform-origin: center center;
+   transform: perspective(800px) rotateY(360deg);
+}
+.main .cardWrapper .box1:active::after{
+    max-height:280px;  
+}
+
+/* >>> box2 <<< */
+.main .cardWrapper .box2{
+    background: url(./img/IMG_20240521_140020.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box2::after{
+    content: "Vegeta";
+    font-weight: bold;
+    text-align: center;
+    color:orange;
+    width: 100%;
+    height: 80px;
+    max-height: 0px;
+    position: absolute;
+    z-index: 1;
+    background: #000;
+    opacity:.7;
+    bottom: -40px;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box2:hover{
+    background: url(./img/IMG_20240521_140032.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box2:active{
+   transform-origin: center center;
+   transform: perspective(800px) rotateY(360deg);
+}
+.main .cardWrapper .box2:active::after{
+    max-height:280px;  
+}
+
+/* <<<< box3 >>>> */
+
+.main .cardWrapper .box3{
+    background: url(./img/whitecard1.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box3::after{
+    content: "Son GoKu";
+    font-weight: bold;
+    text-align: center;
+    color:orange;
+    width: 100%;
+    height: 80px;
+    max-height: 0px;
+    position: absolute;
+    z-index: 1;
+    background: #000;
+    opacity:.7;
+    bottom: -40px;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box3:hover{
+    background: url(./img/whitecard2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .8s ease-in-out;
+}
+.main .cardWrapper .box3:active{
+   transform-origin: center center;
+   transform: perspective(800px) rotateY(360deg);
+}
+.main .cardWrapper .box3:active::after{
+    max-height:280px;  
+}
+
+@media(max-width:1167px) and (min-width:1080px){
+    .main h2{
+        font-size: 25px;
+    }
+    .main span{
+        transform: translate(25%,-80%);
+    }
+}
+@media(max-width:1080px) and (min-width:800px){
+    .sideBar-icon{
+        background: url(./img/menu_48dp_FILL0_wght400_GRAD0_opsz48.png);
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 100;
+        top: 10px;
+        left: 10px;
+        border:none;
+        transition: .6s ease-in-out;
+    }
+    .sideBar-icon.active{
+        background: url(./img/menu_48dp_FILL0_wght400_GRAD0_opsz48\ \(1\).png);
+        background-position: center;
+        background-size: contain;
+        transform: rotate(-180deg);
+        transition: .6s ease-in-out;
+    }
+
+    .nav .navmenu{
+        display: none;
+    }
+    .nav{
+        align-items: center;
+        justify-content: center;
+    }
+    .main h2{
+        font-size: 20px;
+        width:37%;
+        margin-top: 0px;
+    }
+    .main span{
+        transform: translate(15%,-80%);
+    }
+    .main p{
+        margin-left:47px;
+    }
+    .main .cardWrapper{
+        height:75vh;
+        flex-wrap: wrap;
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        gap: 8px;
+        bottom: 60px;
+    }
+    .main .cardWrapper .box{
+        width: 34%;
+        height: 215px;
+    }
+}
+@media(max-width:800px) and (min-width:550px){
+    .sideBar-icon{
+        background: url(./img/menu_48dp_FILL0_wght400_GRAD0_opsz48.png);
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 100;
+        top: 10px;
+        left: 10px;
+        border:none;
+        transition: .6s ease-in-out;
+    }
+    .sideBar-icon.active{
+        background: url(./img/menu_48dp_FILL0_wght400_GRAD0_opsz48\ \(1\).png);
+        background-position: center;
+        background-size: contain;
+        transform: rotate(-180deg);
+        transition: .6s ease-in-out;
+    }
+
+    .nav .navmenu{
+        display: none;
+    }
+    .nav{
+        align-items: center;
+        justify-content: center;
+    }
+    .main h2{
+        font-size: 20px;
+        width:35%;
+        margin-top: 0px;
+    }
+    .main span{
+        transform: translate(15%,-125%);
+        width:30%;
+        font-size: 14px;
+        text-align: center;
+    }
+    .main .cardWrapper{
+        height:68vh;
+        flex-wrap: wrap;
+        width: 39%;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        gap: 8px;
+        bottom: 74px;
+        right: 2px;
+    }
+    .main .cardWrapper::before{
+        position: absolute;
+        top: -35px;
+        font-size: 17px;
+        font-weight:600;
+        color: #ff9d00;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main .cardWrapper .box{
+        width: 45%;
+        height: 200px;
+    }
+}
+
+
